@@ -1,0 +1,118 @@
+{
+    "app-id": "org.sparkleshare.Sparkleshare",
+    "command": "sparkleshare",
+    "runtime": "org.gnome.Platform",
+    "branch": "master",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "metadata": "metadata",
+    "finish-args": [
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=system-bus",
+        "--socket=session-bus",
+        "--share=ipc",
+        "--device=dri",
+        "--share=network",
+        "--filesystem=home"
+    ],
+    "modules": [
+        {
+            "name": "mono",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://download.mono-project.com/sources/mono/mono-4.2.2.30.tar.bz2",
+                    "sha256": "57858cd033be9915d7abdc5158c1faae8fa05757c3b7117cab3d703aa696c56b"
+                }
+            ]
+        },
+        {
+            "name": "desktop-file-utils",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.21.tar.xz",
+                    "sha256": "b6c9b860538ef1cffbcdfbc9cb578f85a080ad8c1207c8b3a39e9fd183f9782b"
+                }
+            ]
+        },
+        {
+            "name": "gtk-sharp3",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mono/gtk-sharp.git"
+                }
+            ]
+        },
+        {
+            "name": "soup-sharp",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hbons/soup-sharp"
+                }
+            ]
+        },
+        {
+            "name": "dbus-sharp",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hbons/dbus-sharp"
+                }
+            ]
+        },
+        {
+            "name": "dbus-sharp-glib",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hbons/dbus-sharp-glib"
+                }
+            ]
+        },
+        {
+            "name": "notify-sharp",
+            "config-opts": ["--disable-docs"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hbons/notify-sharp"
+                }
+            ] 
+        },
+        {
+            "name": "openssh",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://mirror.exonetric.net/pub/OpenBSD/OpenSSH/portable/openssh-7.1p2.tar.gz",
+                    "sha256": "dd75f024dcf21e06a0d6421d582690bf987a1f6323e32ad6619392f3bfde6bbd"
+                }
+            ]
+        },
+        {
+            "name": "git",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.kernel.org/pub/software/scm/git/git-1.8.5.tar.xz",
+                    "sha256": "5ab5b821a35e49cb71d23fd0d50e8d30b991bb7e85c9199d48d3b65b42396878"
+                }
+            ]
+        },
+        {
+            "name": "sparkleshare",
+            "sources": [
+                {
+                    "type": "git",
+                    "branch": "xdg-app",
+                    "url": "https://www.github.com/hbons/SparkleShare"
+                }
+            ]
+        }
+    ]
+}
+
