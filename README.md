@@ -1,5 +1,10 @@
 SparkleShare specification for [xdg-app](https://www.freedesktop.org/wiki/Software/xdg-app/).
 
+```
+# Install latest xdg-app and xdg-app-builder
+sudo dnf --enablerepo=updates-testing install xdg-app xdg-app-builder
+```
+
 ```bash
 # Install the GNOME runtime and SDK
 wget http://sdk.gnome.org/keys/gnome-sdk.gpg
