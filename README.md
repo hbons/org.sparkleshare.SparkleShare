@@ -1,6 +1,6 @@
 SparkleShare specification for [xdg-app](https://www.freedesktop.org/wiki/Software/xdg-app/).
 
-```
+```bash
 # Install latest xdg-app and xdg-app-builder
 sudo dnf --enablerepo=updates-testing install xdg-app xdg-app-builder
 ```
