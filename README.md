@@ -18,6 +18,6 @@ xdg-app-builder --repo=repo app org.sparkleshare.SparkleShare.json
 # Install and run the SparkleShare app
 xdg-app --user remote-add --no-gpg-verify sparkleshare ./repo/
 xdg-app --user install sparkleshare org.sparkleshare.SparkleShare
-xdg-app run org.sparkleshare.SparkleShare start
+xdg-app run org.sparkleshare.SparkleShare
 ```
 
