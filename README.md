@@ -14,7 +14,9 @@ xdg-app --user install gnome org.gnome.Sdk
 
 # Build a repository with the GNOME runtime and SparkleShare app
 xdg-app-builder --repo=repo app org.sparkleshare.SparkleShare.json
+```
 
+```bash
 # Install and run the SparkleShare app
 xdg-app --user remote-add --no-gpg-verify sparkleshare ./repo/
 xdg-app --user install sparkleshare org.sparkleshare.SparkleShare
