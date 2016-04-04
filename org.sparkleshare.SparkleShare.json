@@ -27,7 +27,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "openssl-configure",
+                    "path": "patches/openssl-configure",
                     "dest-filename": "configure"
                 }
             ]
@@ -44,6 +44,16 @@
             ]
         },
         {
+            "name": "curl",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://curl.haxx.se/download/curl-7.48.0.tar.gz",
+                    "sha256": "d248f3f9288ae20b8a7e462cb1909a6e67ad5c585040bca64fa2a71d993f3b1b"
+                }
+            ]
+        },
+        {
             "name": "git",
             "config-opts": ["--with-openssl=no"],
             "sources": [
@@ -51,6 +61,15 @@
                     "type": "archive",
                     "url": "https://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.xz",
                     "sha256": "dee574defbe05ec7356a0842ddbda51315926f2fa7e39c2539f2c3dcc52e457b"
+                },
+                {
+                    "type": "file",
+                    "path": "patches/git-lfs-1.1.2",
+                    "dest-filename": "git-lfs"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/git-lfs.patch"
                 }
             ]
         },
@@ -61,16 +80,6 @@
                     "type": "archive",
                     "url": "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.21.tar.xz",
                     "sha256": "b6c9b860538ef1cffbcdfbc9cb578f85a080ad8c1207c8b3a39e9fd183f9782b"
-                }
-            ]
-        },
-        {
-            "name": "curl",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://curl.haxx.se/download/curl-7.48.0.tar.gz",
-                    "sha256": "d248f3f9288ae20b8a7e462cb1909a6e67ad5c585040bca64fa2a71d993f3b1b"
                 }
             ]
         },
