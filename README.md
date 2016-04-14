@@ -7,10 +7,9 @@ sudo dnf --enablerepo=updates-testing install xdg-app xdg-app-builder
 
 ```bash
 # Install the GNOME runtime and SDK
-wget http://sdk.gnome.org/keys/gnome-sdk.gpg
-xdg-app --user remote-add --gpg-import=gnome-sdk.gpg gnome http://sdk.gnome.org/repo/
-xdg-app --user install gnome org.gnome.Platform
-xdg-app --user install gnome org.gnome.Sdk
+xdg-app --user remote-add gnome-sdk --no-gpg-verify http://sdk.gnome.org/repo/
+xdg-app --user install gnome-sdk org.gnome.Platform 3.18
+xdg-app --user install gnome-sdk org.gnome.Sdk 3.18
 
 # Build a repository with the GNOME runtime and SparkleShare app
 xdg-app-builder --repo=repo app org.sparkleshare.SparkleShare.json

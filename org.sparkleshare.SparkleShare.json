@@ -1,9 +1,9 @@
 {
     "app-id": "org.sparkleshare.Sparkleshare",
     "command": "sparkleshare",
-    "runtime": "org.gnome.Platform",
     "branch": "master",
-    "runtime-version": "master",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.18",
     "sdk": "org.gnome.Sdk",
     "metadata": "metadata",
     "finish-args": [
@@ -56,6 +56,8 @@
         {
             "name": "git",
             "config-opts": ["--with-openssl=no"],
+            "make-args": ["NO_PERL=1"],
+            "make-install-args": ["NO_PERL=1"],
             "sources": [
                 {
                     "type": "archive",
@@ -103,15 +105,6 @@
             ]
         },
         {
-            "name": "soup-sharp",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/hbons/soup-sharp"
-                }
-            ]
-        },
-        {
             "name": "dbus-sharp",
             "sources": [
                 {
@@ -138,6 +131,27 @@
                     "url": "https://github.com/hbons/notify-sharp"
                 }
             ] 
+        },
+        {
+            "name": "webkit2-sharp",
+            "config-opts": ["--enable-monodoc=no"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/hbons/webkit2-sharp"
+                }
+            ] 
+        },
+        {
+            "name": "libdbusmenu",
+            "config-opts": ["--with-gtk=3", "--enable-gtk-doc=no", "--disable-vala", "--disable-dumper", "--enable-introspection=no"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz",
+                    "sha256": "b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a"
+                }
+            ]
         },
         {
             "name": "sparkleshare",

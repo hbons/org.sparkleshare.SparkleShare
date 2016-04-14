@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -Rf ./app
+rm -Rf ./app # Add new --force-clean option to xdg-app-builder later
 rm -Rf ./repo
 
 xdg-app-builder --repo=sparkleshare.bitbucket.org app org.sparkleshare.SparkleShare.json
