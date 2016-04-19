@@ -5,23 +5,23 @@ SparkleShare specification for [xdg-app](https://www.freedesktop.org/wiki/Softwa
 sudo dnf --enablerepo=updates-testing install xdg-app xdg-app-builder
 ```
 
+Here's how to create a SparkleShare bundle:
 ```bash
 # Install GNOME runtime and SDK
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 xdg-app --user remote-add gnome-sdk --gpg-import=gnome-sdk.gpg http://sdk.gnome.org/repo/
 xdg-app --user install gnome-sdk org.gnome.Platform 3.18
 xdg-app --user install gnome-sdk org.gnome.Sdk 3.18
-```
 
-```bash
 # Build repository with GNOME runtime and SparkleShare app
 xdg-app-builder --repo=repo --gpg-sign=<KEY_ID> app org.sparkleshare.SparkleShare.json
 ```
 
+Here's how to install the latest version of SparkleShare:
 ```bash
-# Install and run SparkleShare app
 xdg-app --user remote-add --gpg-import=sparkleshare.gpg sparkleshare ./repo/
 xdg-app --user install sparkleshare org.sparkleshare.SparkleShare
-xdg-app run org.sparkleshare.SparkleShare
 ```
+
+You can now start SparkleShare from the apps menu.
 
