@@ -1,7 +1,7 @@
 {
     "app-id": "org.sparkleshare.Sparkleshare",
-    "command": "sparkleshare",
     "branch": "master",
+    "command": "sparkleshare",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.18",
     "sdk": "org.gnome.Sdk",
@@ -134,7 +134,7 @@
         },
         {
             "name": "webkit2-sharp",
-            "config-opts": ["--enable-monodoc=no"],
+            "config-opts": ["--disable-docs"],
             "sources": [
                 {
                     "type": "git",
