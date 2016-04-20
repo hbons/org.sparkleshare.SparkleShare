@@ -6,6 +6,7 @@
     "runtime-version": "3.18",
     "sdk": "org.gnome.Sdk",
     "metadata": "metadata",
+    "separate-locales": false,
     "finish-args": [
         "--socket=x11",
         "--socket=wayland",
