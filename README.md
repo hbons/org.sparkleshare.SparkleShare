@@ -8,7 +8,7 @@ sudo dnf --enablerepo=updates-testing install xdg-app xdg-app-builder
 
 ## Install the latest version of SparkleShare
 ```bash
-wget https://github.com/hbons/org.sparkleshare.SparkleShare/sparkleshare.gpg
+wget https://github.com/hbons/org.sparkleshare.SparkleShare/raw/master/sparkleshare.gpg
 xdg-app --user remote-add --gpg-import=sparkleshare.gpg sparkleshare-releases http://releases.sparkleshare.org
 xdg-app --user install sparkleshare-releases org.sparkleshare.SparkleShare
 ```
