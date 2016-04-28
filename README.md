@@ -16,7 +16,7 @@ xdg-app --user install sparkleshare-releases org.sparkleshare.SparkleShare
 You can now start SparkleShare from the apps menu.
 
 
-# Create a SparkleShare bundle
+## Create a SparkleShare bundle
 
 ```bash
 # Install GNOME runtime and SDK
