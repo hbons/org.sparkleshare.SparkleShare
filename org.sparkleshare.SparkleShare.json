@@ -3,7 +3,7 @@
     "branch": "master",
     "command": "sparkleshare",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.18",
+    "runtime-version": "3.20",
     "sdk": "org.gnome.Sdk",
     "metadata": "metadata",
     "separate-locales": false,
@@ -20,6 +20,16 @@
         "--filesystem=home"
     ],
     "modules": [
+        {
+            "name": "mono",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://download.mono-project.com/sources/mono/mono-4.2.2.30.tar.bz2",
+                    "sha256": "57858cd033be9915d7abdc5158c1faae8fa05757c3b7117cab3d703aa696c56b"
+                }
+            ]
+        },
         {
             "name": "openssl",
             "sources": [
@@ -69,7 +79,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "patches/git-lfs-1.1.2",
+                    "path": "patches/git-lfs-1.2.0",
                     "dest-filename": "git-lfs"
                 },
                 {
@@ -85,16 +95,6 @@
                     "type": "archive",
                     "url": "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.21.tar.xz",
                     "sha256": "b6c9b860538ef1cffbcdfbc9cb578f85a080ad8c1207c8b3a39e9fd183f9782b"
-                }
-            ]
-        },
-        {
-            "name": "mono",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://download.mono-project.com/sources/mono/mono-4.2.2.30.tar.bz2",
-                    "sha256": "57858cd033be9915d7abdc5158c1faae8fa05757c3b7117cab3d703aa696c56b"
                 }
             ]
         },

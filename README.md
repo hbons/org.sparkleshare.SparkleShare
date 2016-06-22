@@ -22,8 +22,8 @@ You can now start SparkleShare from the apps menu.
 # Install GNOME runtime and SDK
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 flatpak --user remote-add gnome-sdk --gpg-import=gnome-sdk.gpg http://sdk.gnome.org/repo/
-flatpak --user install gnome-sdk org.gnome.Platform 3.18
-flatpak --user install gnome-sdk org.gnome.Sdk 3.18
+flatpak --user install gnome-sdk org.gnome.Platform 3.20
+flatpak --user install gnome-sdk org.gnome.Sdk 3.20
 
 # Build repository with GNOME runtime and SparkleShare app
 flatpak-builder --repo=repo --gpg-sign=<KEY_ID> app org.sparkleshare.SparkleShare.json
