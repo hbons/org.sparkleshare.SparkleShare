@@ -1,0 +1,6 @@
+[Flatpak Ref]
+Title=SparkleShare
+Name=org.sparkleshare.SparkleShare
+Url=flathub.org
+IsRuntime=False
+GPGKey=TODO
