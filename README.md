@@ -2,7 +2,7 @@
 
 ```bash
 # Install flatpak and flatpak-builder (on Fedora, your distro may differ)
-sudo dnf --enablerepo=updates-testing install flatpak flatpak-libs flatpak-builder bubblewrap
+sudo dnf install flatpak-builder
 ```
 
 
@@ -20,12 +20,11 @@ You can now start SparkleShare from the apps menu.
 
 ```bash
 # Install GNOME runtime and SDK
-wget https://sdk.gnome.org/keys/gnome-sdk.gpg
-flatpak --user remote-add gnome-sdk --gpg-import=gnome-sdk.gpg http://sdk.gnome.org/repo/
+flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
 flatpak --user install gnome-sdk org.gnome.Platform 3.24
 flatpak --user install gnome-sdk org.gnome.Sdk 3.24
 
 # Build repository with GNOME runtime and SparkleShare app
-flatpak-builder --repo=repo --gpg-sign=<KEY_ID> app org.sparkleshare.SparkleShare.json
+flatpak-builder --repo=repo app org.sparkleshare.SparkleShare.json
 ```
 

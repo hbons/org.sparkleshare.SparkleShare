@@ -146,23 +146,13 @@
             ] 
         },
         {
-            "name": "libdbusmenu",
-            "config-opts": ["--with-gtk=3", "--enable-gtk-doc=no", "--disable-vala", "--disable-dumper", "--enable-introspection=no"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz",
-                    "sha256": "b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a"
-                }
-            ]
-        },
-        {
             "name": "sparkleshare",
             "sources": [
                 {
                     "type": "git",
 		    "branch": "2.0-beta-1",
-                    "url": "https://github.com/hbons/SparkleShare"
+                    "url": "https://github.com/hbons/SparkleShare",
+                    "disable-fsckobjects": true
                 }
             ]
         }
