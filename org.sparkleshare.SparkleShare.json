@@ -3,7 +3,7 @@
     "branch": "master",
     "command": "sparkleshare",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.20",
+    "runtime-version": "3.24",
     "sdk": "org.gnome.Sdk",
     "metadata": "metadata",
     "separate-locales": false,
@@ -161,7 +161,6 @@
             "sources": [
                 {
                     "type": "git",
-                    "branch": "xdg-app",
                     "url": "https://github.com/hbons/SparkleShare"
                 }
             ]
