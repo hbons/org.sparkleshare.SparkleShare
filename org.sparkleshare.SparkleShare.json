@@ -49,12 +49,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.xz",
-                    "sha256": "dee574defbe05ec7356a0842ddbda51315926f2fa7e39c2539f2c3dcc52e457b"
+                    "url": "https://www.kernel.org/pub/software/scm/git/git-2.14.1.tar.xz",
+                    "sha256": "6f724c6d0e9e13114ab35db6f67e1b2c1934b641e89366e6a0e37618231f2cc6"
                 },
                 {
                     "type": "file",
-                    "path": "patches/git-lfs-1.3.0",
+                    "path": "patches/git-lfs-2.2.1",
                     "dest-filename": "git-lfs"
                 },
                 {
