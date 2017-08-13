@@ -20,7 +20,7 @@ You can now start SparkleShare from the apps menu.
 
 ```bash
 # Install GNOME runtime and SDK
-flatpak remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
+flatpak --user remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
 flatpak --user install gnome-sdk org.gnome.Platform 3.24
 flatpak --user install gnome-sdk org.gnome.Sdk 3.24
 
