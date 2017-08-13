@@ -31,21 +31,6 @@
             ]
         },
         {
-            "name": "openssl",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.openssl.org/source/openssl-1.0.2g.tar.gz",
-                    "sha256": "b784b1b3907ce39abf4098702dade6365522a253ad1552e267a9a0e89594aa33"
-                },
-                {
-                    "type": "file",
-                    "path": "patches/openssl-configure",
-                    "dest-filename": "configure"
-                }
-            ]
-        },
-        {
             "name": "openssh",
             "config-opts": ["--without-pie"],
             "sources": [
@@ -53,16 +38,6 @@
                     "type": "archive",
                     "url": "http://mirror.exonetric.net/pub/OpenBSD/OpenSSH/portable/openssh-7.1p2.tar.gz",
                     "sha256": "dd75f024dcf21e06a0d6421d582690bf987a1f6323e32ad6619392f3bfde6bbd"
-                }
-            ]
-        },
-        {
-            "name": "curl",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://curl.haxx.se/download/curl-7.48.0.tar.gz",
-                    "sha256": "d248f3f9288ae20b8a7e462cb1909a6e67ad5c585040bca64fa2a71d993f3b1b"
                 }
             ]
         },
@@ -85,16 +60,6 @@
                 {
                     "type": "patch",
                     "path": "patches/git-lfs.patch"
-                }
-            ]
-        },
-        {
-            "name": "desktop-file-utils",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.21.tar.xz",
-                    "sha256": "b6c9b860538ef1cffbcdfbc9cb578f85a080ad8c1207c8b3a39e9fd183f9782b"
                 }
             ]
         },
