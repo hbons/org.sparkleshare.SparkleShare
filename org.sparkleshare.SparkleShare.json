@@ -115,9 +115,9 @@
             "sources": [
                 {
                     "type": "git",
-		    "branch": "2.0-beta",
-                    "url": "https://github.com/hbons/SparkleShare",
-                    "disable-fsckobjects": true
+                    "branch": "2.0.0",
+                    "commit": "dff7e9d0010865e070487866d641494c64ad600d",
+                    "url": "https://github.com/hbons/SparkleShare"
                 }
             ]
         }
