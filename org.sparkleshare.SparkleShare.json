@@ -1,6 +1,6 @@
 {
     "app-id": "org.sparkleshare.Sparkleshare",
-    "branch": "master",
+    "branch": "stable",
     "command": "sparkleshare",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.24",
@@ -25,8 +25,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.mono-project.com/sources/mono/mono-4.2.2.30.tar.bz2",
-                    "sha256": "57858cd033be9915d7abdc5158c1faae8fa05757c3b7117cab3d703aa696c56b"
+                    "url": "http://download.mono-project.com/sources/mono/mono-5.2.0.215.tar.bz2",
+                    "sha256": "8f0cebd3f7b03f68b9bd015706da9c713ed968004612f1ef8350993d8fe850ea"
                 }
             ]
         },
