@@ -1,9 +1,9 @@
 {
     "app-id": "org.sparkleshare.Sparkleshare",
-    "command": "sparkleshare",
+    "sdk": "org.gnome.Sdk",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.24",
-    "sdk": "org.gnome.Sdk",
+    "command": "sparkleshare",
     "metadata": "metadata",
     "separate-locales": false,
     "finish-args": [
