@@ -7,16 +7,14 @@
     "metadata": "metadata",
     "separate-locales": false,
     "finish-args": [
-        "--socket=x11",
+        "--device=dri",
+        "--filesystem=home"
+        "--share=ipc",
+        "--share=network",
         "--socket=wayland",
-        "--socket=system-bus",
-        "--socket=session-bus",
+        "--socket=x11",
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*",
-        "--share=ipc",
-        "--device=dri",
-        "--share=network",
-        "--filesystem=home"
     ],
     "modules": [
         {
@@ -24,8 +22,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://download.mono-project.com/sources/mono/mono-4.2.2.30.tar.bz2",
-                    "sha256": "57858cd033be9915d7abdc5158c1faae8fa05757c3b7117cab3d703aa696c56b"
+                    "url": "http://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2",
+                    "sha256": "18cb38a670e51609c36c687ed90ad42cfedabeffd0a2dc5f7f0c46249eb8dbef"
                 }
             ]
         },
