@@ -14,8 +14,8 @@ sudo dnf install flatpak flatpak-builder
 ```bash
 # Install GNOME runtime and SDK
 flatpak --user remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak --user install gnome-sdk org.gnome.Platform 3.24
-flatpak --user install gnome-sdk org.gnome.Sdk 3.24
+flatpak --user install gnome org.gnome.Platform 3.24
+flatpak --user install gnome org.gnome.Sdk 3.24
 
 # Build repository with GNOME runtime and SparkleShare app
 flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.json
