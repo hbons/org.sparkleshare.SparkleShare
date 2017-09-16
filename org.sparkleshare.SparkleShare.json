@@ -57,12 +57,9 @@
                     "type": "shell",
                     "commands": [
                         "tar -xzf git-lfs-*.tar.gz",
-                        "mv git-lfs-*/git-lfs ."
+                        "mkdir --parents /app/libexec/git-core/",
+                        "mv git-lfs-*/git-lfs /app/libexec/git-core/"
                     ]
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/git-lfs.patch"
                 }
             ]
         },
