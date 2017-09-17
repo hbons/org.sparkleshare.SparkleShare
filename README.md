@@ -1,14 +1,6 @@
 # SparkleShare [Flatpak](http://flatpak.org/) spec
 
 
-## Install flatpak
-
-```bash
-# Install flatpak and flatpak-builder (on Fedora, your distro may differ)
-sudo dnf install flatpak flatpak-builder
-```
-
-
 ## Create a SparkleShare flatpak repo
 
 ```bash
@@ -28,5 +20,5 @@ flatpak --user remote-add --no-gpg-verify sparkleshare ./repo
 flatpak --user install sparkleshare org.sparkleshare.SparkleShare
 ```
 
-You can now start SparkleShare from the apps menu.
+You can now start SparkleShare from the apps menu or by running `flatpak run org.sparkleshare.SparkleShare`.
 
