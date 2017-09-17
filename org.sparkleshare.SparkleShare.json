@@ -4,7 +4,6 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.24",
     "command": "sparkleshare",
-    "separate-locales": false,
     "finish-args": [
         "--device=dri",
         "--filesystem=home",
