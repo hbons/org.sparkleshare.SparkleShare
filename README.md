@@ -6,8 +6,8 @@
 ```bash
 # Install GNOME runtime and SDK
 flatpak --user remote-add --from gnome https://sdk.gnome.org/gnome.flatpakrepo
-flatpak --user install gnome org.gnome.Platform 3.24
-flatpak --user install gnome org.gnome.Sdk 3.24
+flatpak --user install gnome org.gnome.Platform 3.26
+flatpak --user install gnome org.gnome.Sdk 3.26
 
 # Build repository with GNOME runtime and SparkleShare app
 flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.json
@@ -15,6 +15,7 @@ flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.json
 
 
 ## Install the latest version of SparkleShare from the repo
+
 ```bash
 flatpak --user remote-add --no-gpg-verify sparkleshare ./repo
 flatpak --user install sparkleshare org.sparkleshare.SparkleShare

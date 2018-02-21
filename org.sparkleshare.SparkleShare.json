@@ -2,7 +2,7 @@
     "app-id": "org.sparkleshare.SparkleShare",
     "sdk": "org.gnome.Sdk",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.24",
+    "runtime-version": "3.26",
     "command": "sparkleshare",
     "finish-args": [
         "--device=dri",
@@ -118,16 +118,15 @@
         },
         {
             "name": "sparkleshare",
+            "buildsystem": "meson",
+            "builddir": true,
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/hbons/SparkleShare/archive/2.0.1.tar.gz",
-                    "sha256": "d7ceaf3aadaea1f8715aa6175cf4dd3353824f0975b9861eed5e732552ab840"
+                    "type": "git",
+                    "url": "https://github.com/hbons/SparkleShare",
+                    "branch": "master",
+                    "disable-fsckobjects": true
                 }
-            ],
-            "post-install": [
-                "mkdir /app/share/appdata/",
-                "cp SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml /app/share/appdata/"
             ]
         }
     ]
