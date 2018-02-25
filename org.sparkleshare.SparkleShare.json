@@ -18,6 +18,10 @@
     "modules": [
         {
             "name": "mono",
+            "config-opts": [
+                "--enable-minimal=aot,profiler,attach,full_messages",
+                "--with-mcs-docs=no", "--with-profile2=no"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -95,6 +99,7 @@
         },
         {
             "name": "webkit2-sharp",
+            "config-opts": ["--disable-gtk-doc", "--disable-man"],
             "no-parallel-make": true,
             "sources": [
                 {
@@ -107,7 +112,6 @@
         {
             "name": "sparkleshare",
             "buildsystem": "meson",
-            "builddir": true,
             "sources": [
                 {
                     "type": "git",
