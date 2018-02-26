@@ -11,9 +11,10 @@
         "--share=network",
         "--socket=wayland",
         "--socket=x11",
-        "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gtk.vfs",
-        "--talk-name=org.gtk.vfs.*"
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=com.canonical.indicator.application"
     ],
     "modules": [
         {
