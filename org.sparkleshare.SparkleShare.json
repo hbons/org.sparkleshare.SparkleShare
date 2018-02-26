@@ -81,7 +81,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/hbons/dbus-sharp-glib",
+                    "url": "https://github.com/mono/dbus-sharp-glib",
                     "commit": "9c003f566efa7cbcb413d6b374ccb15ec8abb330"
                 }
             ]
