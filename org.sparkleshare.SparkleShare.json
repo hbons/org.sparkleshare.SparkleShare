@@ -47,14 +47,29 @@
             "name": "git",
             "buildsystem": "simple",
             "build-commands": [
-                "cp -R bin/* /app/bin",
-                "cp -R libexec/* /app/libexec"
+                "./script/build-ubuntu.sh /run/build/git/git /run/build/git",
+                "cp -R ./bin/* /app/bin",
+                "cp -R ./libexec/* /app/libexec"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "tag": "v2.17.0",
+                    "url": "https://github.com/desktop/dugite-native"
+                }
+            ]
+        },
+        {
+            "name": "git-lfs",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cp git-lfs /app/libexec/git-core/"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/desktop/dugite-native/releases/download/v2.16.2/dugite-native-v2.16.2-ubuntu-119.tar.gz",
-                    "sha256": "831dddd2381bb7a85f45b35911f123d062a2bdacf2116181503a1293e58a6e79"
+                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-linux-amd64-2.4.0.tar.gz",
+                    "sha256": "56728ec9219c1a9339e1e6166f551459d74d300a29b51031851759cee4d7d710"
                 }
             ]
         },
