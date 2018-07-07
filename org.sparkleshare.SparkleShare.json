@@ -200,7 +200,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/hbons/SparkleShare",
-                    "branch": "master",
+                    "branch": "fix/appindicator",
                     "disable-fsckobjects": true
                 }
             ]
