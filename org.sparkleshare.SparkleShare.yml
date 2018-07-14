@@ -148,7 +148,7 @@ modules:
       sources:
           - type: git
             url: 'https://github.com/hbons/SparkleShare'
-            branch: fix/appindicator
+            branch: master
             disable-fsckobjects: true
       buildsystem: meson
 
