@@ -10,7 +10,7 @@ flatpak --user install gnome org.gnome.Platform 3.28
 flatpak --user install gnome org.gnome.Sdk 3.28
 
 # Build repository with GNOME runtime and SparkleShare app
-flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.json
+flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.yml
 ```
 
 

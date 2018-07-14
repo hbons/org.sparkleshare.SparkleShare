@@ -1,0 +1,154 @@
+app-id: org.sparkleshare.SparkleShare
+sdk: org.gnome.Sdk
+runtime: org.gnome.Platform
+runtime-version: '3.28'
+command: sparkleshare
+
+finish-args:
+    - --device=dri
+    - --filesystem=home
+    - --share=ipc
+    - --share=network
+    - --socket=wayland
+    - --socket=x11
+    - --talk-name=org.gtk.vfs
+    - --talk-name=org.gtk.vfs.*
+    - --talk-name=org.freedesktop.Notifications
+    - --talk-name=com.canonical.indicator.application
+    - --talk-name=org.kde.StatusNotifierWatcher
+
+modules:
+    - name: mono
+      sources:
+          - type: archive
+            url: http://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2
+            sha256: 18cb38a670e51609c36c687ed90ad42cfedabeffd0a2dc5f7f0c46249eb8dbef
+      config-opts:
+          - --enable-minimal=aot,profiler,attach,full_messages
+          - --with-mcs-docs=no
+          - --with-profile2=no
+
+    - name: openssh
+      sources:
+          - type: archive
+            url: 'https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.6p1.tar.gz'
+            sha256: a323caeeddfe145baaa0db16e98d784b1fbc7dd436a6bf1f479dfd5cd1d21723
+      config-opts:
+          - --without-pie
+
+    - name: git
+      sources: 
+          - type: git
+            tag: v2.17.0
+            url: 'https://github.com/desktop/dugite-native'
+      buildsystem: simple
+      build-commands:
+          - ./script/build-ubuntu.sh /run/build/git/git /run/build/git
+          - cp -R ./bin/* /app/bin
+          - cp -R ./libexec/* /app/libexec
+
+    - name: git-lfs
+      sources:
+          - type: archive
+            url: 'https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-linux-amd64-2.4.0.tar.gz'
+            sha256: 56728ec9219c1a9339e1e6166f551459d74d300a29b51031851759cee4d7d710
+      buildsystem: simple
+      build-commands:
+          - cp git-lfs /app/libexec/git-core/
+
+    - name: gtk-sharp3
+      sources:
+          - type: git
+            url: 'https://github.com/mono/gtk-sharp.git'
+            commit: 9ef7d3f394b9d485674c59e92db24ac66fd9f16b
+
+    - name: dbus-sharp
+      sources: 
+          - type: git
+            url: 'https://github.com/mono/dbus-sharp'
+            commit: 2686c4f15d56de301ef506047840814874c8e74f
+
+    - name: dbus-sharp-glib
+      sources:
+          - type: git
+            url: 'https://github.com/mono/dbus-sharp-glib'
+            commit: 9c003f566efa7cbcb413d6b374ccb15ec8abb330
+
+    - name: notify-sharp
+      sources:
+          - type: git
+            url: 'https://github.com/hbons/notify-sharp'
+            commit: 1f56c37349b7750f3fb4cb6ac88ccbaa62c15d30
+      config-opts:
+          - --disable-docs
+
+    - name: libdbusmenu
+      sources:
+          - type: archive
+            url: 'https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz'
+            sha256: b9cc4a2acd74509435892823607d966d424bd9ad5d0b00938f27240a1bfa878a
+      config-opts:
+          - --with-gtk=3
+          - --disable-static
+          - --disable-tests
+      build-options: 
+          env:
+              HAVE_VALGRIND_FALSE: '1'
+              HAVE_VALGRIND_TRUE: ''
+              PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR: /app/share/gir-1.0
+              PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR: /app/lib/girepository-1.0
+      cleanup: ['/include', '/lib/*.la', '/lib/pkgconfig', '/libexec', '/share']
+
+    - name: libindicator
+      sources:
+          - type: archive
+            url: 'https://launchpad.net/libindicator/12.10/12.10.1/+download/libindicator-12.10.1.tar.gz'
+            sha256: b2d2e44c10313d5c9cd60db455d520f80b36dc39562df079a3f29495e8f9447f
+          - type: shell
+            commands:
+                - sed 's/gtk_icon_info_free/g_object_unref/' -i libindicator/indicator-image-helper.c
+                - sed 's/LIBS="-lm  $LIBS"/LIBS=" -lm  $LIBS"/g' -i configure
+                - sed 's/LIBM="-lm"/LIBM=" -lm"/g' -i configure
+      config-opts:
+          - --with-gtk=3
+          - --disable-static
+          - --disable-tests
+      cleanup: ['/include', '/lib/*.la', '/lib/pkgconfig', '/libexec', '/share']
+
+    - name: libappindicator
+      sources:
+          - type: archive
+            url: 'https://launchpad.net/libappindicator/12.10/12.10.0/+download/libappindicator-12.10.0.tar.gz'
+            sha256: d5907c1f98084acf28fd19593cb70672caa0ca1cf82d747ba6f4830d4cc3b49f
+          - type: patch
+            path: patches/appindicator.patch
+      rm-configure: true
+      config-opts:
+          - --with-gtk=3
+          - --disable-static
+          - --disable-tests
+          - --disable-gtk-doc-html
+      cleanup: ['/include', '/lib/*.la', '/lib/pkgconfig', '/libexec', '/share']
+
+    - name: appindicator-sharp
+      sources:
+          - type: git
+            url: 'https://github.com/hbons/appindicator-sharp'
+            commit: 5a79cde93da6d68a4b1373f1ce5796c3c5fe1b37
+      no-parallel-make: true
+
+    - name: webkit2-sharp
+      sources:
+          - type: git
+            url: 'https://github.com/hbons/webkit2-sharp'
+            commit: a59fd76dd730432c76b12ee6347ea66567107ab9
+      no-parallel-make: true
+
+    - name: sparkleshare
+      sources:
+          - type: git
+            url: 'https://github.com/hbons/SparkleShare'
+            branch: fix/appindicator
+            disable-fsckobjects: true
+      buildsystem: meson
+
