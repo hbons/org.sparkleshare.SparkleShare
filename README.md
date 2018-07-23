@@ -25,3 +25,5 @@ flatpak --user install sparkleshare org.sparkleshare.SparkleShare
 
 You can now start SparkleShare from the apps menu or by running `flatpak run org.sparkleshare.SparkleShare`.
 
+I've added two scripts to automate the build an installation steps after you've installed the GNOME runtime and SDK. `./build-stable.sh` builds the last released version, and `./build-nightly.sh` builds the last commit on [master](https://www.github.com/hbons/SparkleShare/tree/master). Edit the `.yml` files if you'd like to build a different branch.
+
