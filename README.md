@@ -1,5 +1,7 @@
 # SparkleShare [Flatpak](http://flatpak.org/) spec
 
+First, run `git submodule update --init`.
+
 
 ## Create a SparkleShare flatpak repo
 
