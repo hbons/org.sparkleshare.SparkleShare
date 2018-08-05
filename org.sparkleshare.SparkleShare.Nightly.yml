@@ -1,4 +1,4 @@
-app-id: org.sparkleshare.SparkleShare.Nightly
+app-id: org.sparkleshare.SparkleShare
 branch: nightly
 sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
@@ -12,11 +12,11 @@ finish-args:
     - --share=network
     - --socket=wayland
     - --socket=x11
+    - --talk-name=org.freedesktop.Notifications
     - --talk-name=org.gtk.vfs
     - --talk-name=org.gtk.vfs.*
-    - --talk-name=org.freedesktop.Notifications
-    - --talk-name=com.canonical.indicator.application
     - --talk-name=org.kde.StatusNotifierWatcher
+    - --talk-name=com.canonical.indicator.application
 
 modules:
     - name: mono
@@ -63,6 +63,13 @@ modules:
             url: 'https://github.com/mono/gtk-sharp.git'
             commit: 9ef7d3f394b9d485674c59e92db24ac66fd9f16b
 
+    - name: webkit2-sharp
+      sources:
+          - type: git
+            url: 'https://github.com/hbons/webkit2-sharp'
+            commit: a59fd76dd730432c76b12ee6347ea66567107ab9
+      no-parallel-make: true
+
     - name: dbus-sharp
       sources: 
           - type: git
@@ -92,18 +99,13 @@ modules:
             commit: 5a79cde93da6d68a4b1373f1ce5796c3c5fe1b37
       no-parallel-make: true
 
-    - name: webkit2-sharp
-      sources:
-          - type: git
-            url: 'https://github.com/hbons/webkit2-sharp'
-            commit: a59fd76dd730432c76b12ee6347ea66567107ab9
-      no-parallel-make: true
-
     - name: sparkleshare
       sources:
           - type: git
             url: 'https://github.com/hbons/SparkleShare'
-            branch: master
+            branch: feature/nightly
             disable-fsckobjects: true
       buildsystem: meson
+      config-opts:
+          - -Dnightly=true
 
