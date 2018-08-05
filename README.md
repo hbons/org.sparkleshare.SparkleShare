@@ -15,6 +15,8 @@ flatpak --user install gnome org.gnome.Sdk 3.28
 flatpak-builder --repo=./repo ./app org.sparkleshare.SparkleShare.yml
 ```
 
+It may take a while to build the flatpak (around 30 minutes on my computer), this is normal.
+
 
 ## Install the latest version of SparkleShare from the repo
 
