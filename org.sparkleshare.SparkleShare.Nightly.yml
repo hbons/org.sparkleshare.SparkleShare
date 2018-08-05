@@ -103,7 +103,7 @@ modules:
       sources:
           - type: git
             url: 'https://github.com/hbons/SparkleShare'
-            branch: feature/nightly
+            branch: master
             disable-fsckobjects: true
       buildsystem: meson
       config-opts:
