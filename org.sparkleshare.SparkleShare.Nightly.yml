@@ -1,5 +1,5 @@
 app-id: org.sparkleshare.SparkleShare
-branch: stable
+branch: nightly
 sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
 runtime-version: '3.28'
@@ -101,7 +101,11 @@ modules:
 
     - name: sparkleshare
       sources:
-          - type: archive
-            url: 'https://github.com/hbons/SparkleShare/archive/3.28.tar.gz'
-            sha256: a52d6eab102411da5b6c772c8446c8ea95885c1f87de30dab9782011a449222f
+          - type: git
+            url: 'https://github.com/hbons/SparkleShare'
+            branch: feature/nightly
+            disable-fsckobjects: true
       buildsystem: meson
+      config-opts:
+          - -Dnightly=true
+
