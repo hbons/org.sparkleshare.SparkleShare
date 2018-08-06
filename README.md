@@ -1,6 +1,6 @@
 # SparkleShare [Flatpak](http://flatpak.org/) spec
 
-This spec is used to make SparkleShare [available on Flathub](https://flathub.org/apps/details/org.sparkleshare.SparkleShare). If you just want to use the latest stable release, it's easiest to just install SparkleShare from there.
+This spec is used to make SparkleShare [available on Flathub](https://flathub.org/apps/details/org.sparkleshare.SparkleShare). If you just want to use the latest stable release, it's easiest to install SparkleShare from there.
 
 If you're interested in installing the latest nightly SparkleShare version, do read on.
 
