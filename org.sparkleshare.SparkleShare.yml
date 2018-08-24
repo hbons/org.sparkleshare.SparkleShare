@@ -41,6 +41,7 @@ modules:
       sources: 
           - type: git
             tag: v2.17.0
+            commit: 265941062ed3b753797a028b5cd4388131a8e9f2
             url: 'https://github.com/desktop/dugite-native'
       buildsystem: simple
       build-commands:
