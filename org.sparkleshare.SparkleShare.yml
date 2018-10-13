@@ -41,8 +41,9 @@ modules:
     - name: git
       sources: 
           - type: git
-            tag: v2.17.0
+            tag: v2.19.1-2
             url: 'https://github.com/desktop/dugite-native'
+            commit: d433cbfa6c99d18d54aa7b9b3c7ba15a03960da4
       buildsystem: simple
       build-commands:
           - ./script/build-ubuntu.sh /run/build/git/git /run/build/git
@@ -52,8 +53,8 @@ modules:
     - name: git-lfs
       sources:
           - type: archive
-            url: 'https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-linux-amd64-2.4.0.tar.gz'
-            sha256: 56728ec9219c1a9339e1e6166f551459d74d300a29b51031851759cee4d7d710
+            url: 'https://github.com/git-lfs/git-lfs/releases/download/v2.5.2/git-lfs-linux-amd64-v2.5.2.tar.gz'
+            sha256: 624396e8994578ac38c3e5987889be56dba453c378c0675d56cffbc5b8972aa5
       buildsystem: simple
       build-commands:
           - cp git-lfs /app/libexec/git-core/
@@ -62,7 +63,7 @@ modules:
       sources:
           - type: git
             url: 'https://github.com/mono/gtk-sharp.git'
-            commit: 9ef7d3f394b9d485674c59e92db24ac66fd9f16b
+            commit: fa0897dc2cd15f76ca09ad08de9fbf9efa411f8d
 
     - name: webkit2-sharp
       sources:
