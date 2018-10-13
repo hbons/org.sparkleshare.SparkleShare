@@ -62,7 +62,7 @@ modules:
       sources:
           - type: git
             url: 'https://github.com/mono/gtk-sharp.git'
-            commit: 9ef7d3f394b9d485674c59e92db24ac66fd9f16b
+            commit: fa0897dc2cd15f76ca09ad08de9fbf9efa411f8d
 
     - name: webkit2-sharp
       sources:
