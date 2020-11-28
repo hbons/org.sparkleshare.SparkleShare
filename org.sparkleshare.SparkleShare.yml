@@ -2,7 +2,7 @@ app-id: org.sparkleshare.SparkleShare
 branch: stable
 sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
-runtime-version: '3.28'
+runtime-version: '3.38'
 command: sparkleshare
 
 finish-args:
@@ -104,6 +104,6 @@ modules:
     - name: sparkleshare
       sources:
           - type: archive
-            url: 'https://github.com/hbons/SparkleShare/archive/3.28.tar.gz'
-            sha256: a52d6eab102411da5b6c772c8446c8ea95885c1f87de30dab9782011a449222f
+            url: 'https://github.com/hbons/SparkleShare/archive/3.38.tar.gz'
+            sha256: 2439fa35ffe592a0e52c477e206b20e37d4f5d3a46023701b7867417eaf0f4d
       buildsystem: meson
