@@ -33,8 +33,8 @@ modules:
     - name: openssh
       sources:
           - type: archive
-            url: 'https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.6p1.tar.gz'
-            sha256: a323caeeddfe145baaa0db16e98d784b1fbc7dd436a6bf1f479dfd5cd1d21723
+            url: 'https://fastly.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.8p1.tar.gz'
+            sha256: 1a484bb15152c183bb2514e112aa30dd34138c3cfb032eee5490a66c507144ca
       config-opts:
           - --without-pie
 
